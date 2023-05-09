@@ -1,7 +1,7 @@
 # ansible-playbook-example
 install apache2 http server on multiple server by ansible playbook
 
-# please make changes in hosts file by adding all ip addresses of all server in which you want to install Apache http server
+# update ip address of all servers by adding lines in hosts file
 192.168.0.11 <br />
 192.168.0.12 <br />
 
