@@ -1,0 +1,7 @@
+10.10.10.11
+10.10.10.12
+
+[all:vars]
+ansible_user=ubuntu
+ansible_ssh_pass=ubuntu
+ansible_become_pass=ubuntu

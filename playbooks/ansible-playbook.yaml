@@ -1,0 +1,23 @@
+- hosts: all
+  become: True
+
+  tasks:
+
+    - name: Update Ubuntu apt cache
+      apt: update_cache=yes 
+    
+    - name: Install latest version of Apache
+      apt: name=apache2 state=latest
+
+    - name: Copy custom index file of apache 
+      copy:
+       src: ../files/index.html
+       dest: /var/www/html/
+       force: yes
+
+    - name: Starting Apache HTTP server 
+      ansible.builtin.service:
+       name: apache2
+       enabled: yes
+       state: restarted
+      
